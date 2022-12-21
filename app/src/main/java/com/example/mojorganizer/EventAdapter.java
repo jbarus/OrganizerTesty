@@ -25,7 +25,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder>
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.event_cell, parent, false);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        layoutParams.height = (int) parent.getHeight();
+        layoutParams.height = 60;
 
         return new EventViewHolder(view, onEventListener, events);
     }
@@ -35,10 +35,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder>
 
         final Event event = events.get(position);
         if(event == null)
-            holder.abc.setText("");
+            holder.name.setText("");
         else
         {
-            holder.abc.setText(event.getName()+" "+ CalendarUtils.formattedTime(event.getTime()));
+            holder.name.setText(event.getName()+" "+ CalendarUtils.formattedTime(event.getTime()));
         }
 
 

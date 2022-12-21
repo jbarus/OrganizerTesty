@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class EventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-    public final TextView abc;
+    public final TextView name;
     private final ArrayList<Event> events;
     private final EventAdapter.OnEventListener onEventListener;
 
     public EventViewHolder(@NonNull View itemView, EventAdapter.OnEventListener onEventListener, ArrayList<Event> events) {
         super(itemView);
-        abc = itemView.findViewById(R.id.eventCellTV);
+        name = itemView.findViewById(R.id.eventCellTV);
         this.events = events;
         this.onEventListener = onEventListener;
         itemView.setOnClickListener(this);

@@ -97,4 +97,8 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
     public void onEventClick() {
         Toast.makeText(this, "Dziala", Toast.LENGTH_SHORT).show();
     }
+
+    public void dailyAction(View view) {
+        startActivity(new Intent(this, DayViewActivity.class));
+    }
 }
